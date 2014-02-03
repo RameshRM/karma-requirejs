@@ -1,17 +1,19 @@
-requirejs.config({
-    paths: {
-        'jquery': '../lib/jquery',
-        'underscore': '../lib/underscore'
-    },
+// requirejs.config({
+//     paths: {
+//         'jquery': '../lib/jquery',
+//         'underscore': '../lib/underscore'
+//     },
 
-    shim: {
-        'underscore': {
-            exports: '_'
-        }
-    }
-});
+//     shim: {
+//         'underscore': {
+//             exports: '_'
+//         }
+//     }
+// });
 
-define(['app', 'jquery'], function (App, $) {
-    var app = new App($('body'));
+define(['app'], function (App) {
+    var app = new App();
     app.render();
+    var hello = require("HelloWorld");
+
 });
